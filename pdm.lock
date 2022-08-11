@@ -1,0 +1,62 @@
+[[package]]
+name = "click"
+version = "8.1.3"
+requires_python = ">=3.7"
+summary = "Composable command line interface toolkit"
+dependencies = [
+    "colorama; platform_system == \"Windows\"",
+]
+
+[[package]]
+name = "colorama"
+version = "0.4.5"
+requires_python = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+summary = "Cross-platform colored terminal text."
+
+[[package]]
+name = "easysnmp"
+version = "0.2.6"
+summary = "A blazingly fast and Pythonic SNMP library based on the official Net-SNMP bindings"
+
+[[package]]
+name = "typer"
+version = "0.6.1"
+requires_python = ">=3.6"
+summary = "Typer, build great CLIs. Easy to code. Based on Python type hints."
+dependencies = [
+    "click<9.0.0,>=7.1.1",
+]
+
+[metadata]
+lock_version = "4.0"
+content_hash = "sha256:d067937bf66e6c73aa83586a1583edca4263a9f41c595d544a88152faffc1090"
+
+[metadata.files]
+"click 8.1.3" = [
+    {url = "https://files.pythonhosted.org/packages/59/87/84326af34517fca8c58418d148f2403df25303e02736832403587318e9e8/click-8.1.3.tar.gz", hash = "sha256:7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"},
+    {url = "https://files.pythonhosted.org/packages/c2/f1/df59e28c642d583f7dacffb1e0965d0e00b218e0186d7858ac5233dce840/click-8.1.3-py3-none-any.whl", hash = "sha256:bb4d8133cb15a609f44e8213d9b391b0809795062913b383c62be0ee95b1db48"},
+]
+"colorama 0.4.5" = [
+    {url = "https://files.pythonhosted.org/packages/2b/65/24d033a9325ce42ccbfa3ca2d0866c7e89cc68e5b9d92ecaba9feef631df/colorama-0.4.5.tar.gz", hash = "sha256:e6c6b4334fc50988a639d9b98aa429a0b57da6e17b9a44f0451f930b6967b7a4"},
+    {url = "https://files.pythonhosted.org/packages/77/8b/7550e87b2d308a1b711725dfaddc19c695f8c5fa413c640b2be01662f4e6/colorama-0.4.5-py2.py3-none-any.whl", hash = "sha256:854bf444933e37f5824ae7bfc1e98d5bce2ebe4160d46b5edf346a89358e99da"},
+]
+"easysnmp 0.2.6" = [
+    {url = "https://files.pythonhosted.org/packages/0c/60/f4bffda46f1f9e5b39ec7ec0e8b40e29346b78104f112d5e6ed36035f1d6/easysnmp-0.2.6-cp38-cp38-manylinux_2_24_x86_64.whl", hash = "sha256:081b1d11662c94a621867514c5111484039011945c83eb0b25778c3992c1fdaa"},
+    {url = "https://files.pythonhosted.org/packages/11/da/539aedacf8e94cc5f6fbee9dcdb07c6fc9892fd38387cec5a507e1e4a873/easysnmp-0.2.6-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:d5e98cbbe57b8198c0e79cec1d6c0ef567f91375f2e720a001db8990363958d5"},
+    {url = "https://files.pythonhosted.org/packages/14/53/69c6a1e74314665fd77081a5060a0d56b3ffce094de42ad6a49e0677b535/easysnmp-0.2.6-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:a2f772217278cf7e4176ae25c171f44533b5e31d8f6c88202ea99a08a806aeb7"},
+    {url = "https://files.pythonhosted.org/packages/21/d1/6681212ad035c6421f529bbbea52330c4575979f5eea5e8aad6eb54bf45d/easysnmp-0.2.6.tar.gz", hash = "sha256:8326df1bc8d9cdb29e3e43d55d56cb24c0d98f6997a7a1571f32815e8bdfef15"},
+    {url = "https://files.pythonhosted.org/packages/46/34/f9f548c4b32d1b1861a7437e67f9039fec88ceb7b74c0ca0cc1540329b4c/easysnmp-0.2.6-pp39-pypy39_pp73-macosx_10_9_x86_64.whl", hash = "sha256:9fc6dee930f31d34cf37153dccc2df343afc3aaa2cd35bf0d54250f61b6f7d96"},
+    {url = "https://files.pythonhosted.org/packages/54/3e/2df8190be076d6e1adaa150c0acc33a52b95c7597fa7332b0014f437f6ec/easysnmp-0.2.6-pp37-pypy37_pp73-macosx_10_9_x86_64.whl", hash = "sha256:41273ce4e073847441eb9e9b576d3018c11916fa6ef33dbdbe995830c9711bf3"},
+    {url = "https://files.pythonhosted.org/packages/69/b3/1313e7366a976e4ae0ff6f7977f691f9b332fa5257278bbaabcb715222ee/easysnmp-0.2.6-cp310-cp310-manylinux_2_24_x86_64.whl", hash = "sha256:f76feb57e2649ae38ccfd5fd03d695b35734c1217151ca5d868fd0efe5849c46"},
+    {url = "https://files.pythonhosted.org/packages/a6/e2/36d2df30665aacd87d202a7ebde435698fb2b2dd3d87e2186fb26373517e/easysnmp-0.2.6-pp38-pypy38_pp73-macosx_10_9_x86_64.whl", hash = "sha256:a57b2fe7c8f49b0bacb12214f0fb952ffed4a40326faa30dc417f04a68d2fb2d"},
+    {url = "https://files.pythonhosted.org/packages/ab/65/56568f386c62251dd8b83af943f5da4830fc39475eb140ec2b32cecf71d6/easysnmp-0.2.6-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:6eed5df81a2fff46aa8035bfdc66fda1da525e7cd7159676ab264f1ab3a55897"},
+    {url = "https://files.pythonhosted.org/packages/b9/4c/5945dacb7672df5fdf56f0f456d9ca1615352f676ee89e30fba161e090e3/easysnmp-0.2.6-cp39-cp39-manylinux_2_24_x86_64.whl", hash = "sha256:6600d7be6a01e7339887e01e99651cc3654bacf5579660ad25a92f874a5c2f31"},
+    {url = "https://files.pythonhosted.org/packages/d2/80/907aaa82f3427b73064cb04b1b93040f426dd835f559f4d2ebc863c39f4a/easysnmp-0.2.6-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:d50fe515e5f5e04967deabddf56f343727a0c223013342e9ac96db6cc36a14e1"},
+    {url = "https://files.pythonhosted.org/packages/d3/2c/52923cc205b5836fb4b3f94fb50cccbc98753d59fe83562c8480dec542ce/easysnmp-0.2.6-cp37-cp37m-manylinux_2_24_x86_64.whl", hash = "sha256:e1df508e28aa055bd7deeb13394d7821b6d341a9eacce5aefbc4a8c143801ff8"},
+    {url = "https://files.pythonhosted.org/packages/de/ce/01a6d7fa1650a37963ff933dc91b9db3d66a23c44ac74a0551e546260a43/easysnmp-0.2.6-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:e7a1a0f7b9672a132b22a486117781285c22faa5fe55d9a53e57ba79eb28f92e"},
+    {url = "https://files.pythonhosted.org/packages/ed/2f/39a18f8beede767905e7d9ec421c160539e9958d897e7b69a47c6ba45c70/easysnmp-0.2.6-cp36-cp36m-manylinux_2_24_x86_64.whl", hash = "sha256:e6a2e97cd69fdb73a92f626a56ff022f909884e65dc1958ce9d77677aa69af57"},
+]
+"typer 0.6.1" = [
+    {url = "https://files.pythonhosted.org/packages/cf/f9/27c5cd9ab067e3ece4cecb920c33f38cc986f839b12de19650fd49dc3c63/typer-0.6.1.tar.gz", hash = "sha256:2d5720a5e63f73eaf31edaa15f6ab87f35f0690f8ca233017d7d23d743a91d73"},
+    {url = "https://files.pythonhosted.org/packages/e8/9b/7470461c68588ed09c2e53cbb16b802815232796d95f7b4744cc8842f19d/typer-0.6.1-py3-none-any.whl", hash = "sha256:54b19e5df18654070a82f8c2aa1da456a4ac16a2a83e6dcd9f170e291c56338e"},
+]
