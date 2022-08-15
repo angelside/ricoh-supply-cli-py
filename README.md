@@ -70,7 +70,7 @@ ip: 172.10.0.3 - model: P 502 - serial: 22222222222
 
 ## 🤝 Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Before contributing issues or pull requests, be sure to review the [Contributing Guidelines](./.github/CONTRIBUTING.md) first.
 
 ## 💬 Questions?
 
@@ -84,4 +84,4 @@ Feel free to [open an issue](http://github.com/angelside/ricoh-supply-cli-py/iss
 
 ## 🏛️ License
 
-[MIT](./LICENSE)
+This project is open-sourced software licensed under the [MIT license](./LICENSE).
