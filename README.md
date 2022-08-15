@@ -54,6 +54,13 @@ ip: 172.10.0.3 - model: P 502 - serial: 22222222222
 [============================------------] 70.0%  black
 ```
 
+## 💥 Features
+
+- Retrieves; model, serial, toner level status
+- Progress bar
+- Ip address validation
+- SNMP exceptions
+
 ## 🎯 Tested Ricoh printer models
 
 - IM C300 (cmyk)
