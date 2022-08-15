@@ -43,6 +43,7 @@ chmod +x main.py
 ### 📋 Sample results
 
 cmyk
+
 ```bash
 > ./main.py 172.10.0.2
 ip: 172.10.0.2 - model: MP C307 - serial: 11111111111
@@ -54,6 +55,7 @@ ip: 172.10.0.2 - model: MP C307 - serial: 11111111111
 ```
 
 only black
+
 ```bash
 ./main.py 172.10.0.3
 ip: 172.10.0.3 - model: P 502 - serial: 22222222222
@@ -62,21 +64,26 @@ ip: 172.10.0.3 - model: P 502 - serial: 22222222222
 ```
 
 ## 🎯 Tested Ricoh printer models
+
 - IM C300 (cmyk)
 - IM C3500 (cmyk)
 - MP C307 (cmyk)
 - P 502 (black)
 
 ## 🤝 Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## 💬 Questions?
-Feel free to [open an issue](http://github.com/angelside/ricoh-supply-cli/issues/new).
+
+Feel free to [open an issue](http://github.com/angelside/ricoh-supply-cli-py/issues/new).
 
 ## 🤩 Support
+
 💙 If you like this project, give it a ⭐ and share it with friends!
 
 [![GitHub-Sponsors](https://img.shields.io/badge/GitHub%20Sponsor-EA4AAA.svg?style=for-the-badge&logo=GitHub-Sponsors&logoColor=white)](https://github.com/sponsors/angelside)
 
 ## 🏛️ License
+
 [MIT](./LICENSE)
