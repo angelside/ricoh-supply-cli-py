@@ -1,9 +1,15 @@
 #!/usr/bin/env python
+"""
+Python CLI tool that allows checking Ricoh printers supply/toner status.
+
+Usage: python main.py <IP_ADDRESS>
+"""
 import ipaddress
 import sys
+
 import typer
 from easysnmp import Session
-from easysnmp.exceptions import (EasySNMPTimeoutError, EasySNMPError)
+from easysnmp.exceptions import EasySNMPError, EasySNMPTimeoutError
 
 # OIDs
 model_name_code         = '.1.3.6.1.2.1.43.5.1.1.16.1'
