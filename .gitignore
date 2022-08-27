@@ -5,3 +5,5 @@ __pypackages__/
 .pdm.toml
 .dccache
 .pylintrc
+.flake8
+__*
