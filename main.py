@@ -56,16 +56,22 @@ def exit_with_msg(msg):
 
 
 def progress_bar(count, text=''):
+
     bar_len    = 40
     total      = 100
     empty_fill = '-'  # ∙
     fill       = '='  # ▣ ◉
 
+    if isinstance(count, str):
+        count = 0
+        percents = 'N/A'
+    else:
+        percents = f'{round(100 * int(count) / float(total))}%'
+
     filled_len = int(round(bar_len * count / float(total)))
-    percents   = round(100 * count / float(total))
     bar        = fill * filled_len + empty_fill * (bar_len - filled_len)
 
-    return f'[{bar}] {percents}% {text}\r'
+    return f'[{bar}] {percents} {text}\r'
 
 
 def validate_ip_address(ip):
@@ -86,7 +92,7 @@ def main(ip):
     print()
 
     for key, value in result['supplyStatus'].items():
-        print(progress_bar(int(value), key))
+        print(progress_bar(value, key))
 
 
 if __name__ == '__main__':
