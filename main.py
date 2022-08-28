@@ -11,6 +11,7 @@ import typer
 from easysnmp import Session
 from easysnmp.exceptions import EasySNMPError, EasySNMPTimeoutError
 
+
 # OIDs
 model_name_code         = '.1.3.6.1.2.1.43.5.1.1.16.1'
 serial_num_code         = '.1.3.6.1.2.1.43.5.1.1.17.1'
@@ -30,7 +31,7 @@ def snmp_request(ip):
         supply_names_snmp = session.walk(supply_names_snmp_code)
         supply_levels_snmp = session.walk(supply_levels_snmp_code)
 
-        supply_names = []
+        supply_names  = []
         supply_levels = []
 
         # Skip waste toner cartridge (index start from 0)
@@ -56,7 +57,6 @@ def exit_with_msg(msg):
 
 
 def progress_bar(count, text=''):
-
     bar_len    = 40
     total      = 100
     empty_fill = '-'  # ∙
@@ -88,8 +88,7 @@ def main(ip):
 
     result = snmp_request(ip)
 
-    print(f"ip: {result['ip']} - model: {result['model']} - serial: {result['serial']}")
-    print()
+    print(f"ip: {result['ip']} - model: {result['model']} - serial: {result['serial']}\n")
 
     for key, value in result['supplyStatus'].items():
         print(progress_bar(value, key))
