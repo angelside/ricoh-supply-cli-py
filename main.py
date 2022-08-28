@@ -11,6 +11,7 @@ import typer
 from easysnmp import Session
 from easysnmp.exceptions import EasySNMPError, EasySNMPTimeoutError
 
+
 # OIDs
 model_name_code         = '.1.3.6.1.2.1.43.5.1.1.16.1'
 serial_num_code         = '.1.3.6.1.2.1.43.5.1.1.17.1'
@@ -23,14 +24,14 @@ def snmp_request(ip):
         # Create an SNMP session to be used for all our requests
         session = Session(hostname=ip, community='public', version=2, timeout=2, retries=1, abort_on_nonexistent=True)
 
-        model_name = session.get(model_name_code).value  # Model name: IM C3500
-        serial_num = session.get(serial_num_code).value  # Serial num: 3110RA10716
+        model_name = session.get(model_name_code).value
+        serial_num = session.get(serial_num_code).value
 
         # Perform an SNMP walk
-        supply_names_snmp = session.walk(supply_names_snmp_code)    # supply names
-        supply_levels_snmp = session.walk(supply_levels_snmp_code)  # supply levels
+        supply_names_snmp = session.walk(supply_names_snmp_code)
+        supply_levels_snmp = session.walk(supply_levels_snmp_code)
 
-        supply_names = []
+        supply_names  = []
         supply_levels = []
 
         # Skip waste toner cartridge (index start from 0)
@@ -56,19 +57,20 @@ def exit_with_msg(msg):
 
 
 def progress_bar(count, text=''):
-
     bar_len    = 40
     total      = 100
     empty_fill = '-'  # ∙
     fill       = '='  # ▣ ◉
 
-    if isinstance(count, str):
-        count = 0
+    # -2 unknown toner
+    if int(count) < 0:
+        count    = 0
         percents = 'N/A'
+        text     = f'{text} (Unknown toner)'
     else:
         percents = f'{round(100 * int(count) / float(total))}%'
 
-    filled_len = int(round(bar_len * count / float(total)))
+    filled_len = int(round(bar_len * int(count) / float(total)))
     bar        = fill * filled_len + empty_fill * (bar_len - filled_len)
 
     return f'[{bar}] {percents} {text}\r'
@@ -88,8 +90,7 @@ def main(ip):
 
     result = snmp_request(ip)
 
-    print(f"ip: {result['ip']} - model: {result['model']} - serial: {result['serial']}")
-    print()
+    print(f"ip: {result['ip']} - model: {result['model']} - serial: {result['serial']}\n")
 
     for key, value in result['supplyStatus'].items():
         print(progress_bar(value, key))
