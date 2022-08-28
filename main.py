@@ -62,13 +62,15 @@ def progress_bar(count, text=''):
     empty_fill = '-'  # ∙
     fill       = '='  # ▣ ◉
 
-    if isinstance(count, str):
-        count = 0
+    # -2 unknown toner
+    if int(count) < 0:
+        count    = 0
         percents = 'N/A'
+        text     = f'{text} (Unknown toner)'
     else:
         percents = f'{round(100 * int(count) / float(total))}%'
 
-    filled_len = int(round(bar_len * count / float(total)))
+    filled_len = int(round(bar_len * int(count) / float(total)))
     bar        = fill * filled_len + empty_fill * (bar_len - filled_len)
 
     return f'[{bar}] {percents} {text}\r'
