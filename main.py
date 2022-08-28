@@ -23,12 +23,12 @@ def snmp_request(ip):
         # Create an SNMP session to be used for all our requests
         session = Session(hostname=ip, community='public', version=2, timeout=2, retries=1, abort_on_nonexistent=True)
 
-        model_name = session.get(model_name_code).value  # Model name: IM C3500
-        serial_num = session.get(serial_num_code).value  # Serial num: 3110RA10716
+        model_name = session.get(model_name_code).value
+        serial_num = session.get(serial_num_code).value
 
         # Perform an SNMP walk
-        supply_names_snmp = session.walk(supply_names_snmp_code)    # supply names
-        supply_levels_snmp = session.walk(supply_levels_snmp_code)  # supply levels
+        supply_names_snmp = session.walk(supply_names_snmp_code)
+        supply_levels_snmp = session.walk(supply_levels_snmp_code)
 
         supply_names = []
         supply_levels = []
