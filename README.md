@@ -7,13 +7,13 @@
 
 > Ricoh Supply CLI is a _"blazingly fast 🤣"_ Python CLI tool that allows checking Ricoh printers supply/toner status with SNMP protocol.
 
+### Windows is not supported
+
 > __Warning__ - Windows installation is failing
 
 I tested in Windows 11 with Python 3.11.1, and it's failing. I think easysnmp doesn't have proper windows support.
 
-```
-✖ Install easysnmp 0.2.6 failed
-```
+```✖ Install easysnmp 0.2.6 failed```
 
 ## 📦 Installation
 
